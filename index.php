@@ -1,41 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Multipage Blog Website</title>
-    <!-- CUSTOM STYLESHEET -->
-    <link rel="stylesheet" href="./style.css">
-    <!-- ICONSCOUT CDN -->
-    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
-    <!-- GOODLE FONT (MONTSERRAT) -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-</head>
-<body>
-    <nav>
-        <div class="container nav__container">
-            <a href="index.html" class="nav__logo">MASKSL</a>
-            <ul class="nav__items">
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <!-- <li><a href="signin.html">Signin</a></li> -->
-                <li class="nav__profile">
-                    <div class="avatar">
-                        <img src="./images/avatar1.jpg">
-                    </div>
-                    <ul>
-                        <li><a href="dashboard.html">Dashboard</a></li>
-                        <li><a href="logout.html">Logout</a></li>
-                    </ul>
-                </li>
-            </ul>
-            <button id="open__nav-btn"><i class="uil uil-bars"></i></button>
-            <button id="close__nav-btn"><i class="uil uil-multiply"></i></button>
-        </div>
-    </nav>
-    <!--===================== END OF NAV ===============================-->
+<?php 
+include 'partials/header.php';
+
+?>
 
     <section class="featured">
         <div class="container featured__container">
@@ -44,7 +10,7 @@
             </div>
             <div class="post__info">
                 <a href="" class="category__button">Wild Life</a>
-                <h2 class="post__title"><a href="post.html">Lorem ipsum sjuhbfdj ohursf jfgdkhj. Aldfhgh!</a></h2>
+                <h2 class="post__title"><a href="post.php">Lorem ipsum sjuhbfdj ohursf jfgdkhj. Aldfhgh!</a></h2>
                 <p class="post__body">
                     lorem fghubhsuydf sOIUHBfb iUhf oiruhf IUHSbhuy iiodfgng zopihfdgher iozudfhgiirfhbg8iuisr fgfnbdi dzifhgbirugb i 98zrb 89yhfwbseigf hfgjuhsg 9i iwsfgberh ifbwefg8urg wr urhgtw voiwigh9r8g swejgn hfrg rjbgiu urhbg rt wgh9rgnrwjng urgbuwjregb jwr 98tgyh9wrsiaogh 8rhgy8rbagiagbhva w9rurghyrugbn.
                 </p>
@@ -70,7 +36,7 @@
                 </div>
                 <div class="post__info">
                     <a href="" class="category__button">Wild Life</a>
-                    <h3 class="post__title"><a href="post.html">Lorem dsfjbgdf isdfgv rfbge tgiaeb g etbuet bte btjb t eh eighetuh et hetnhguetnh e hbudet er.</a>
+                    <h3 class="post__title"><a href="post.php">Lorem dsfjbgdf isdfgv rfbge tgiaeb g etbuet bte btjb t eh eighetuh et hetnhguetnh e hbudet er.</a>
                     </h3>
                     <p class="post__body">
                         Lorem fsdghuhw edfhwv tyh9wnr r3erh 3i9erwtngthg9 uje89rinty  u598ytji5i b5ujyj54b 45jy85jtyb uy8rejguaiweg b45t6 y46 uyb6ju649jk49w 0bny54 bj35iy0539 b5njy j5 5y948 5j y90i5j4 jy 45jy 94jy 4i 9ijuyh94j6yhp yrj thj46oiphj46 yj46iop 0h9tihjpqwaynmo6iknuyi6on 9ea er5.
@@ -92,7 +58,7 @@
                 </div>
                 <div class="post__info">
                     <a href="" class="category__button">Wild Life</a>
-                    <h3 class="post__title"><a href="post.html">Lorem dsfjbgdf isdfgv rfbge tgiaeb g etbuet bte btjb t eh eighetuh et hetnhguetnh e hbudet er.</a>
+                    <h3 class="post__title"><a href="post.php">Lorem dsfjbgdf isdfgv rfbge tgiaeb g etbuet bte btjb t eh eighetuh et hetnhguetnh e hbudet er.</a>
                     </h3>
                     <p class="post__body">
                         Lorem fsdghuhw edfhwv tyh9wnr r3erh 3i9erwtngthg9 uje89rinty  u598ytji5i b5ujyj54b 45jy85jtyb uy8rejguaiweg b45t6 y46 uyb6ju649jk49w 0bny54 bj35iy0539 b5njy j5 5y948 5j y90i5j4 jy 45jy 94jy 4i 9ijuyh94j6yhp yrj thj46oiphj46 yj46iop 0h9tihjpqwaynmo6iknuyi6on 9ea er5.
@@ -114,7 +80,7 @@
                 </div>
                 <div class="post__info">
                     <a href="" class="category__button">Wild Life</a>
-                    <h3 class="post__title"><a href="post.html">Lorem dsfjbgdf isdfgv rfbge tgiaeb g etbuet bte btjb t eh eighetuh et hetnhguetnh e hbudet er.</a>
+                    <h3 class="post__title"><a href="post.php">Lorem dsfjbgdf isdfgv rfbge tgiaeb g etbuet bte btjb t eh eighetuh et hetnhguetnh e hbudet er.</a>
                     </h3>
                     <p class="post__body">
                         Lorem fsdghuhw edfhwv tyh9wnr r3erh 3i9erwtngthg9 uje89rinty  u598ytji5i b5ujyj54b 45jy85jtyb uy8rejguaiweg b45t6 y46 uyb6ju649jk49w 0bny54 bj35iy0539 b5njy j5 5y948 5j y90i5j4 jy 45jy 94jy 4i 9ijuyh94j6yhp yrj thj46oiphj46 yj46iop 0h9tihjpqwaynmo6iknuyi6on 9ea er5.
@@ -136,7 +102,7 @@
                 </div>
                 <div class="post__info">
                     <a href="" class="category__button">Wild Life</a>
-                    <h3 class="post__title"><a href="post.html">Lorem dsfjbgdf isdfgv rfbge tgiaeb g etbuet bte btjb t eh eighetuh et hetnhguetnh e hbudet er.</a>
+                    <h3 class="post__title"><a href="post.php">Lorem dsfjbgdf isdfgv rfbge tgiaeb g etbuet bte btjb t eh eighetuh et hetnhguetnh e hbudet er.</a>
                     </h3>
                     <p class="post__body">
                         Lorem fsdghuhw edfhwv tyh9wnr r3erh 3i9erwtngthg9 uje89rinty  u598ytji5i b5ujyj54b 45jy85jtyb uy8rejguaiweg b45t6 y46 uyb6ju649jk49w 0bny54 bj35iy0539 b5njy j5 5y948 5j y90i5j4 jy 45jy 94jy 4i 9ijuyh94j6yhp yrj thj46oiphj46 yj46iop 0h9tihjpqwaynmo6iknuyi6on 9ea er5.
@@ -158,7 +124,7 @@
                 </div>
                 <div class="post__info">
                     <a href="" class="category__button">Wild Life</a>
-                    <h3 class="post__title"><a href="post.html">Lorem dsfjbgdf isdfgv rfbge tgiaeb g etbuet bte btjb t eh eighetuh et hetnhguetnh e hbudet er.</a>
+                    <h3 class="post__title"><a href="post.php">Lorem dsfjbgdf isdfgv rfbge tgiaeb g etbuet bte btjb t eh eighetuh et hetnhguetnh e hbudet er.</a>
                     </h3>
                     <p class="post__body">
                         Lorem fsdghuhw edfhwv tyh9wnr r3erh 3i9erwtngthg9 uje89rinty  u598ytji5i b5ujyj54b 45jy85jtyb uy8rejguaiweg b45t6 y46 uyb6ju649jk49w 0bny54 bj35iy0539 b5njy j5 5y948 5j y90i5j4 jy 45jy 94jy 4i 9ijuyh94j6yhp yrj thj46oiphj46 yj46iop 0h9tihjpqwaynmo6iknuyi6on 9ea er5.
@@ -180,7 +146,7 @@
                 </div>
                 <div class="post__info">
                     <a href="" class="category__button">Wild Life</a>
-                    <h3 class="post__title"><a href="post.html">Lorem dsfjbgdf isdfgv rfbge tgiaeb g etbuet bte btjb t eh eighetuh et hetnhguetnh e hbudet er.</a>
+                    <h3 class="post__title"><a href="post.php">Lorem dsfjbgdf isdfgv rfbge tgiaeb g etbuet bte btjb t eh eighetuh et hetnhguetnh e hbudet er.</a>
                     </h3>
                     <p class="post__body">
                         Lorem fsdghuhw edfhwv tyh9wnr r3erh 3i9erwtngthg9 uje89rinty  u598ytji5i b5ujyj54b 45jy85jtyb uy8rejguaiweg b45t6 y46 uyb6ju649jk49w 0bny54 bj35iy0539 b5njy j5 5y948 5j y90i5j4 jy 45jy 94jy 4i 9ijuyh94j6yhp yrj thj46oiphj46 yj46iop 0h9tihjpqwaynmo6iknuyi6on 9ea er5.
@@ -202,7 +168,7 @@
                 </div>
                 <div class="post__info">
                     <a href="" class="category__button">Wild Life</a>
-                    <h3 class="post__title"><a href="post.html">Lorem dsfjbgdf isdfgv rfbge tgiaeb g etbuet bte btjb t eh eighetuh et hetnhguetnh e hbudet er.</a>
+                    <h3 class="post__title"><a href="post.php">Lorem dsfjbgdf isdfgv rfbge tgiaeb g etbuet bte btjb t eh eighetuh et hetnhguetnh e hbudet er.</a>
                     </h3>
                     <p class="post__body">
                         Lorem fsdghuhw edfhwv tyh9wnr r3erh 3i9erwtngthg9 uje89rinty  u598ytji5i b5ujyj54b 45jy85jtyb uy8rejguaiweg b45t6 y46 uyb6ju649jk49w 0bny54 bj35iy0539 b5njy j5 5y948 5j y90i5j4 jy 45jy 94jy 4i 9ijuyh94j6yhp yrj thj46oiphj46 yj46iop 0h9tihjpqwaynmo6iknuyi6on 9ea er5.
@@ -232,64 +198,11 @@
             <a href="" class="category__button">Music</a>
         </div>
     </section>
-     <!--===================== END OF POSTS ===============================-->
+     <!--===================== END OF BUTTONS ===============================-->
 
-     <footer>
-        <div class="footer__socials">
-            <a href="" target="_blank"><i class="uil uil-youtube"></i></a>
-            <a href="" target="_blank"><i class="uil uil-facebook-f"></i></a>
-            <a href="" target="_blank"><i class="uil uil-instagram-alt"></i></a>
-            <a href="" target="_blank"><i class="uil uil-linkedin"></i></a>
-            <a href="" target="_blank"><i class="uil uil-twitter"></i></a>
-        </div>
-        <div class="container footer__container">
-            <article>
-                <h4>Categories</h4>
-                <ul>
-                    <li><a href="">Art</a></li>
-                    <li><a href="">Wild Life</a></li>
-                    <li><a href="">Travel</a></li>
-                    <li><a href="">Music</a></li>
-                    <li><a href="">Science & Technology</a></li>
-                    <li><a href="">Food</a></li>
-                </ul>
-            </article>
-            <article>
-                <h4>Support</h4>
-                <ul>
-                    <li><a href="">Online Support</a></li>
-                    <li><a href="">Call Numbers</a></li>
-                    <li><a href="">Emails</a></li>
-                    <li><a href="">Social Support</a></li>
-                    <li><a href="">Location</a></li>
-                </ul>
-            </article>
-            <article>
-                <h4>Blog</h4>
-                <ul>
-                    <li><a href="">Safety</a></li>
-                    <li><a href="">Repair</a></li>
-                    <li><a href="">Recent</a></li>
-                    <li><a href="">Popular</a></li>
-                    <li><a href="">Categories</a></li>
-                </ul>
-            </article>
-            <article>
-                <h4>Permalinks</h4>
-                <ul>
-                    <li><a href="">Home</a></li>
-                    <li><a href="">Blog</a></li>
-                    <li><a href="">About</a></li>
-                    <li><a href="">Services</a></li>
-                    <li><a href="">Contact</a></li>
-                </ul>
-            </article>
-        </div>
-        <div class="footer__copyright">
-            <small>Copyright &copy; 2023 MASKSL</small>
-        </div>
-     </footer>
 
-     <script src="./main.js"></script>
-</body>
-</html>
+<?php
+
+include 'partials/footer.php'
+
+?>
