@@ -1,5 +1,4 @@
 <?php
-session_start();
 require 'config/constants.php';
 
 $username_email = $_SESSION['signin-data']['username_email'] ?? null;
@@ -28,11 +27,11 @@ unset($_SESSION['signin-data']);
 <section class="form__section">
     <div class="container form__section-container">
         <h2>Sign In</h2>
-        <?php if(isset($_SESSION['signup-success'])) : ?>
+        <?php if (isset($_SESSION['signup-success'])) : ?>
             <div class="alert__message success">
                 <p>
                     <?= $_SESSION['signup-success']; 
-                    unset($_SESSION['signup-success'])
+                    unset($_SESSION['signup-success']);
                     ?>
                 </p>
             </div>
@@ -40,7 +39,7 @@ unset($_SESSION['signin-data']);
             <div class="alert__message error">
                 <p>
                     <?= $_SESSION['signin']; 
-                    unset($_SESSION['signin'])
+                    unset($_SESSION['signin']);
                     ?>
                 </p>
             </div>
