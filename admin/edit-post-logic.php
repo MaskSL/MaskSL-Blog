@@ -13,8 +13,8 @@ if (isset($_POST['submit'])) {
     //set is_featured to 0 if unchecked
     $is_featured = $is_featured == 1 ?: 0;
 
-    // check and validate form data
-    if(!$title) {
+    // check and validate input values
+    if (!$title) {
         $_SESSION['edit-post'] = "Couldn't update post. Invalid form data on edit post page.";
     } elseif (!$category_id) {
         $_SESSION['edit-post'] = "Couldn't update post. Invalid form data on edit post page.";
@@ -42,7 +42,7 @@ if (isset($_POST['submit'])) {
             if (in_array($extension, $allowed_files)) {
                 //make sure image is not too big. (2mb+)
                 if ($thumbnail['size'] < 2000000) {
-                    //upload thumbnail
+                    //upload avatar
                     move_uploaded_file($thumbnail_tmp_name, $thumbnail_destination_path);
                 } else {
                     $_SESSION['edit-post'] = "Couldn't update post. Thumbnail size too big. Should be less than 2mb";
