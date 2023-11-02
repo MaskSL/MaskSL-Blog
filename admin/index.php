@@ -1,8 +1,46 @@
 <?php
-require 'partials/header.php'
+require 'partials/header.php';
+
+// fetch current user's posts from database
+$current_user_id = $_SESSION['user-id'];
+$query = "SELECT id, title, category_id FROM posts WHERE author_id=$current_user_id ORDER BY id DESC";
+$posts = mysqli_query($connection, $query);
 ?>
 
 <section class="dashboard">
+    <?php if (isset($_SESSION['add-post-success'])) : //shows if add post was successful?>
+        <div class="alert__message success container">
+            <P>
+                <?= $_SESSION['add-post-success'];
+                unset($_SESSION['add-post-success']); 
+                ?>
+            </P>
+        </div>
+    <?php elseif (isset($_SESSION['edit-post-success'])) : //shows if edit post was successful?>
+        <div class="alert__message success container">
+            <P>
+                <?= $_SESSION['edit-post-success'];
+                unset($_SESSION['edit-post-success']); 
+                ?>
+            </P>
+        </div>
+    <?php elseif (isset($_SESSION['edit-post'])) : //shows if edit post was NOT successful?>
+        <div class="alert__message error container">
+            <P>
+                <?= $_SESSION['edit-post'];
+                unset($_SESSION['edit-post']); 
+                ?>
+            </P>
+        </div>
+    <?php elseif (isset($_SESSION['delete-post-success'])) : //shows if delete post was successful?>
+        <div class="alert__message success container">
+            <P>
+                <?= $_SESSION['delete-post-success'];
+                unset($_SESSION['delete-post-success']); 
+                ?>
+            </P>
+        </div>
+    <?php endif ?>
     <div class="container dashboard__container">
         <button id="show__sidebar-btn" class="sidebar__toggle">
             <i class="uil uil-angle-right-b"></i>
@@ -47,37 +85,38 @@ require 'partials/header.php'
             </ul>
         </aside>
         <main>
-            <h2>Manage Users</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Title</th>
-                        <th>Category</th>
-                        <th>Edit</th>
-                        <th>Delete</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Confirmation Bias</td>
-                        <td>Wild Life</td>
-                        <td><a href="edit-post.php" class="btn sm">Edit</a></td>
-                        <td><a href="delete-category.php" class="btn sm danger">Delete</a></td>
-                    </tr>
-                    <tr>
-                        <td>Confirmation Bias</td>
-                        <td>Wild Life</td>
-                        <td><a href="edit-post.php" class="btn sm">Edit</a></td>
-                        <td><a href="delete-category.php" class="btn sm danger">Delete</a></td>
-                    </tr>
-                    <tr>
-                        <td>Confirmation Bias</td>
-                        <td>Wild Life</td>
-                        <td><a href="edit-post.php" class="btn sm">Edit</a></td>
-                        <td><a href="delete-category.php" class="btn sm danger">Delete</a></td>
-                    </tr>
-                </tbody>
-            </table>
+            <h2>Manage Posts</h2>
+            <?php if(mysqli_num_rows($posts) > 0) : ?>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Title</th>
+                            <th>Category</th>
+                            <th>Edit</th>
+                            <th>Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php while($post = mysqli_fetch_assoc($posts)) : ?>
+                            <!-- get category title of each post from categoris table  -->
+                            <?php
+                                $category_id = $post['category_id'];
+                                $category_query = "SELECT title FROM categories WHERE id=$category_id";
+                                $category_result = mysqli_query($connection, $category_query);
+                                $category = mysqli_fetch_assoc($category_result);
+                            ?>
+                            <tr>
+                                <td><?= $post['title'] ?></td>
+                                <td><?= $category['title'] ?></td>
+                                <td><a href="<?= ROOT_URL ?>admin/edit-post.php?id=<?= $post['id'] ?>" class="btn sm">Edit</a></td>
+                                <td><a href="<?= ROOT_URL ?>admin/delete-post.php?id=<?= $post['id'] ?>" class="btn sm danger">Delete</a></td>
+                            </tr>
+                        <?php endwhile ?>
+                    </tbody>
+                </table>
+            <?php else : ?>
+                <div class="alert__message error"><?= "No posts found" ?></div>
+            <?php endif ?>
         </main>
     </div>
 </section>

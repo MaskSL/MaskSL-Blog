@@ -21,9 +21,17 @@ if(isset($_GET['id'])) {
 
     //FOR LATER
     // fetch all the thumbnails of user's posts and delete them
-
-
-
+    $thumbnails_query = "SELECT thumbnail FROM posts WHERE author_id=$id";
+    $thumbnails_result = mysqli_query($connection, $thumbnails_query);
+    if (mysqli_num_rows($thumbnails_result) > 0) {
+        while ($thumbnails = mysqli_fetch_assoc($thumbnails_result)) {
+            $thumbnail_path = '../images/' . $thumbnail['thumbnail'];
+            // delete thumbnail from images folder is exist
+            if ($thumbnail_path) {
+                unlink($thumbnail_path);
+            }
+        }
+    }
 
     // delete user from database
     $delete_user_query = "DELETE FROM users WHERE id=$id";
