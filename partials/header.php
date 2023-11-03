@@ -17,7 +17,7 @@ if (isset($_SESSION['user-id'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Masksl-Blog</title>
-    <link rel="icon" type="images/x-icon" href="/images/mask sl logo copy.png" />
+    <link rel="icon" type="images/x-icon" href="images/mask sl logo copy.png">
     <!-- CUSTOM STYLESHEET -->
     <link rel="stylesheet" href="<?= ROOT_URL ?>css/style.css">
     <!-- ICONSCOUT CDN -->
@@ -31,9 +31,11 @@ if (isset($_SESSION['user-id'])) {
             <a href="<?= ROOT_URL ?>" class="nav__logo">MASKSL</a>
             <ul class="nav__items">
                 <li><a href="<?= ROOT_URL ?>blog.php">Blog</a></li>
-                <li><a href="<?= ROOT_URL ?>about.php">About</a></li>
-                <li><a href="<?= ROOT_URL ?>services.php">Services</a></li>
-                <li><a href="<?= ROOT_URL ?>contact.php">Contact</a></li>
+                <li><a href="<?= ROOT_URL ?>http://masksl.42web.io/?i=1#about">About</a></li>
+                <li><a href="<?= ROOT_URL ?>http://masksl.42web.io/?i=1#education">Education</a></li>
+                <li><a href="<?= ROOT_URL ?>http://masksl.42web.io/?i=1#skills">Skills</a></li>
+                <li><a href="<?= ROOT_URL ?>http://masksl.42web.io/projects.html">Projects</a></li>
+                <li><a href="<?= ROOT_URL ?>http://masksl.42web.io/index.html#contact">Contact</a></li>
                 <?php if (isset($_SESSION['user-id'])) : ?>
                     <li class="nav__profile">
                         <div class="avatar">
